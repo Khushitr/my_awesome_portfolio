@@ -1,0 +1,85 @@
+<div style="display: flex; flex-direction: column; align-items: center; padding-top: 3rem; text-align: center;">
+
+  <!-- Profile Image -->
+  <img src="{{ .Site.Params.profileMode.imageUrl }}" alt="{{ .Site.Params.profileMode.imageTitle }}"
+       style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover; margin-bottom: 1.5rem;" />
+
+  <!-- Typewriter Title -->
+  <h1 id="typewriter" style="min-height: 2.5rem; font-size: 2.5rem; font-weight: bold;"></h1>
+
+  <!-- Subtitle -->
+  <p style="max-width: 600px; margin-top: 1rem; font-size: 1.1rem;">
+    {{ replace .Site.Params.profileMode.subtitle "\n" "<br>" | safeHTML }}
+  </p>
+
+  <!-- Social Icons -->
+  <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+    {{ range .Site.Params.profileMode.buttons }}
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        <img src="/icons/{{ lower .name }}.svg" alt="{{ .name }}" width="36" height="36"
+             style="transition: transform 0.2s; filter: brightness(0) invert(1);"
+             onmouseover="this.style.transform='scale(1.2)'"
+             onmouseout="this.style.transform='scale(1)'" />
+      </a>
+    {{ end }}
+  </div>
+
+  <!-- Resume Button -->
+  <a href="/resume/KHUSHI_RESUME.pdf" download
+     style="margin-top: 2rem; background-color: #2d2d2d; color: #fff; padding: 0.75rem 1.5rem;
+            border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center;
+            gap: 0.5rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="20" viewBox="0 0 24 24" width="20">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.34v4h6.66v-4h3.34L12 2z"/>
+    </svg>
+    Download Resume
+  </a>
+</div>
+
+<!-- Typewriter Script -->
+<script>
+  const words = [
+    "Hi, I’m Khushi 👋",
+    "Data Engineer 👩🏽‍💻",
+    "Python Whisperer 🐍",
+    "Fluent in sarcasm & structured chaos"
+  ];
+  let i = 0;
+  let timer;
+
+  function typingEffect() {
+    let word = words[i].split("");
+    let loopTyping = function () {
+      if (word.length > 0) {
+        document.getElementById("typewriter").innerHTML += word.shift();
+      } else {
+        deletingEffect();
+        return false;
+      }
+      timer = setTimeout(loopTyping, 100);
+    };
+    loopTyping();
+  }
+
+  function deletingEffect() {
+    let word = words[i].split("");
+    let loopDeleting = function () {
+      if (word.length > 0) {
+        word.pop();
+        document.getElementById("typewriter").innerHTML = word.join("");
+      } else {
+        i = (i + 1) % words.length;
+        typingEffect();
+        return false;
+      }
+      timer = setTimeout(loopDeleting, 50);
+    };
+    setTimeout(loopDeleting, 1500);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    typingEffect();
+  });
+</script>
+
