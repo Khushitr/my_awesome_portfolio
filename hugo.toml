@@ -1,7 +1,8 @@
-baseURL = "http://example.org/"
+baseURL = "https://khushitr.github.io/my_awesome_portfolio/"
 languageCode = "en-us"
 title = "Khushi Tripathi"
 theme = "PaperMod"
+publishDir = "docs"
 
 [params]
   author = "Khushi Tripathi"
@@ -13,17 +14,17 @@ theme = "PaperMod"
   [params.profileMode]
     enabled = true
     title = "Hi, I’m Khushi 👋"
-    subtitle = """Data Engineer | Python Whisperer
-M.S. Data Science, UB | 2+ YOE
+    subtitle = """Data Engineer | Python Whisperer  
+M.S. Data Science, UB | 2+ YOE  
 Fluent in Python, sarcasm & structured chaos"""
     imageUrl = "/images/My_Profile.png"
     imageTitle = "Khushi Tripathi"
     imageWidth = 180
     imageHeight = 180
     buttons = [
-      { name = "GitHub", url = "https://github.com/Khushitr" },
-      { name = "LinkedIn", url = "https://linkedin.com/in/khushi-tripathi" },
-      { name = "Email", url = "mailto:tripathikhushi214@gmail.com" }
+      { name = "github", url = "https://github.com/Khushitr" },
+      { name = "linkedin", url = "https://linkedin.com/in/khushi-tripathi" },
+      { name = "email", url = "mailto:tripathikhushi214@gmail.com" }
     ]
 
 [menu]
