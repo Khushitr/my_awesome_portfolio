@@ -14,38 +14,40 @@ publishDir = "docs"
   [params.profileMode]
     enabled = true
     title = "Hi, I’m Khushi 👋"
-    subtitle = """Data Engineer | Python Whisperer  
-M.S. Data Science, UB | 2+ YOE  
-Fluent in Python, sarcasm & structured chaos"""
-    imageUrl = "/images/My_Profile.png"
+    subtitle = """Data Engineer with experience designing scalable data pipelines and implementing analytical solutions across large datasets.  
+Proficient in Python, SQL, and data warehousing tools, with a strong foundation in machine learning and model deployment.  
+M.S. in Data Science from the University at Buffalo.  
+I am passionate about turning raw data into strategic insights, and building efficient systems that empower data-driven decision-making.  
+Currently open to opportunities where I can contribute to meaningful projects and collaborate with forward-thinking teams."""
+    imageUrl = "images/My_Profile.png"
     imageTitle = "Khushi Tripathi"
     imageWidth = 180
     imageHeight = 180
     buttons = [
-      { name = "github", url = "https://github.com/Khushitr" },
-      { name = "linkedin", url = "https://linkedin.com/in/khushi-tripathi" },
-      { name = "email", url = "mailto:tripathikhushi214@gmail.com" }
+      { name = "GitHub", url = "https://github.com/Khushitr" },
+      { name = "LinkedIn", url = "https://linkedin.com/in/khushi-tripathi" },
+      { name = "Email", url = "mailto:tripathikhushi214@gmail.com" }
     ]
 
 [menu]
 
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
 
-  [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 2
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 2
 
-  [[menu.main]]
-    name = "Resume"
-    url = "/resume/"
-    weight = 3
+[[menu.main]]
+  name = "Resume"
+  url = "/resume/"
+  weight = 3
 
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 4
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 4
 
