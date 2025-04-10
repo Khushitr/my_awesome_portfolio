@@ -116,104 +116,74 @@ I’m passionate about NLP, predictive analytics, data visualization, and not de
     </nav>
 </header>
 <main class="main">
-  <div style="display: flex; flex-direction: column; align-items: center; padding-top: 3rem; text-align: center;">
-
-  
+  <div style="text-align: center; padding: 2rem;">
   <img src="images/My_Profile.png" alt="Khushi Tripathi"
-       style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover; margin-bottom: 1.5rem;" />
+       style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover; margin-bottom: 1rem;" />
 
   
-  <h1 id="typewriter" style="min-height: 2.5rem; font-size: 2.5rem; font-weight: bold;"></h1>
+  <h1 id="typewriter" style="font-size: 2.5rem; font-weight: bold; height: 3rem;"></h1>
 
-  
-  <p style="max-width: 600px; margin-top: 1rem; font-size: 1.1rem;">
-    Data Engineer with experience designing scalable data pipelines and implementing analytical solutions across large datasets.  <br>Proficient in Python, SQL, and data warehousing tools, with a strong foundation in machine learning and model deployment.  <br>M.S. in Data Science from the University at Buffalo.  <br>I am passionate about turning raw data into strategic insights, and building efficient systems that empower data-driven decision-making.  <br>Currently open to opportunities where I can contribute to meaningful projects and collaborate with forward-thinking teams.
+  <p style="max-width: 600px; margin: auto; margin-top: 1rem;">
+    Data Engineer with experience designing scalable data pipelines and implementing analytical solutions across large datasets.<br>
+Proficient in Python, SQL, and data warehousing tools, with a strong foundation in machine learning and model deployment.<br>
+M.S. in Data Science from the University at Buffalo.<br>
+I am passionate about turning raw data into strategic insights, and building efficient systems that empower data-driven decision-making.<br>
+Currently open to opportunities where I can contribute to meaningful projects and collaborate with forward-thinking teams.
   </p>
 
-  
-  <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.5rem;">
+  <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem;">
     
       <a href="https://github.com/Khushitr" target="_blank" rel="noopener noreferrer">
-        <img src="/icons/github.svg" alt="GitHub" width="36" height="36"
-             style="transition: transform 0.2s; filter: brightness(0) invert(1);"
+        <img src="/icons/github.svg" alt="GitHub"
+             width="36" height="36"
+             style="filter: brightness(0) invert(1); transition: transform 0.2s;"
              onmouseover="this.style.transform='scale(1.2)'"
              onmouseout="this.style.transform='scale(1)'" />
       </a>
     
       <a href="https://linkedin.com/in/khushi-tripathi" target="_blank" rel="noopener noreferrer">
-        <img src="/icons/linkedin.svg" alt="LinkedIn" width="36" height="36"
-             style="transition: transform 0.2s; filter: brightness(0) invert(1);"
+        <img src="/icons/linkedin.svg" alt="LinkedIn"
+             width="36" height="36"
+             style="filter: brightness(0) invert(1); transition: transform 0.2s;"
              onmouseover="this.style.transform='scale(1.2)'"
              onmouseout="this.style.transform='scale(1)'" />
       </a>
     
       <a href="mailto:tripathikhushi214@gmail.com" target="_blank" rel="noopener noreferrer">
-        <img src="/icons/email.svg" alt="Email" width="36" height="36"
-             style="transition: transform 0.2s; filter: brightness(0) invert(1);"
+        <img src="/icons/email.svg" alt="Email"
+             width="36" height="36"
+             style="filter: brightness(0) invert(1); transition: transform 0.2s;"
              onmouseover="this.style.transform='scale(1.2)'"
              onmouseout="this.style.transform='scale(1)'" />
       </a>
     
   </div>
 
+  <div style="margin-top: 2rem;">
+    <a href="/resume/Khushi_Tripathi_Resume.pdf" class="button" download
+       style="background-color: #333; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem;
+              font-weight: bold; text-decoration: none; display: inline-block;">
+      ⬇️ Download Resume
+    </a>
+  </div>
+
   
-  <a href="/resume/KHUSHI_RESUME.pdf" download
-     style="margin-top: 2rem; background-color: #2d2d2d; color: #fff; padding: 0.75rem 1.5rem;
-            border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center;
-            gap: 0.5rem;">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="20" viewBox="0 0 24 24" width="20">
-      <path d="M0 0h24v24H0z" fill="none"/>
-      <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.34v4h6.66v-4h3.34L12 2z"/>
-    </svg>
-    Download Resume
-  </a>
+  <script>
+    const typewriter = document.getElementById('typewriter');
+    const text = "Hi, I'm Khushi";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        typewriter.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  </script>
 </div>
-
-
-<script>
-  const words = [
-    "Hi, I’m Khushi 👋",
-    "Data Engineer 👩🏽‍💻",
-    "Python Whisperer 🐍",
-    "Fluent in sarcasm & structured chaos"
-  ];
-  let i = 0;
-  let timer;
-
-  function typingEffect() {
-    let word = words[i].split("");
-    let loopTyping = function () {
-      if (word.length > 0) {
-        document.getElementById("typewriter").innerHTML += word.shift();
-      } else {
-        deletingEffect();
-        return false;
-      }
-      timer = setTimeout(loopTyping, 100);
-    };
-    loopTyping();
-  }
-
-  function deletingEffect() {
-    let word = words[i].split("");
-    let loopDeleting = function () {
-      if (word.length > 0) {
-        word.pop();
-        document.getElementById("typewriter").innerHTML = word.join("");
-      } else {
-        i = (i + 1) % words.length;
-        typingEffect();
-        return false;
-      }
-      timer = setTimeout(loopDeleting, 50);
-    };
-    setTimeout(loopDeleting, 1500);
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    typingEffect();
-  });
-</script>
 
 
 
