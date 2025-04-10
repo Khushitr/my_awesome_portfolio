@@ -1,4 +1,4 @@
-<div style="text-align: center; padding: 2rem;">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2rem;">
   <img src="{{ .Site.Params.profileMode.imageUrl }}" alt="{{ .Site.Params.profileMode.imageTitle }}"
        style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover; margin-bottom: 1rem;" />
 
@@ -10,15 +10,16 @@
   </p>
 
   <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem;">
-    {{ range .Site.Params.profileMode.buttons }}
-      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-        <img src="/icons/{{ lower .name }}.svg" alt="{{ .name }}"
-             width="36" height="36"
-             style="filter: brightness(0) invert(1); transition: transform 0.2s;"
-             onmouseover="this.style.transform='scale(1.2)'"
-             onmouseout="this.style.transform='scale(1)'" />
-      </a>
-    {{ end }}
+   {{ range .Site.Params.profileMode.buttons }}
+     <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ "icons/" | relURL }}{{ lower .name }}.svg" alt="{{ .name }}" width="36" height="36"
+          style="filter: brightness(0) invert(1); transition: transform 0.2s;"
+          onmouseover="this.style.transform='scale(1.2)'"
+          onmouseout="this.style.transform='scale(1)'" />
+
+     </a>
+   {{ end }}
+
   </div>
 
   <div style="margin-top: 2rem;">
